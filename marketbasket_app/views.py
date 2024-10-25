@@ -14,7 +14,8 @@ def load_data():
 
     if data is None:
         # file_path = r'Online Retail.xlsx'
-        data = pd.read_excel('Online Retail.xlsx')
+        data = pd.read_excel('data\Online Retail.xlsx')
+        data = data.drop(columns=['InvoiceNo'])
         data = data[(data.Quantity > 0) & (data.UnitPrice > 0)].dropna(subset=['CustomerID'])
         data.columns = ['itemNo', 'itemName', 'Quantity', 'Date', 'Price', 'CustomerID', 'Country']
         cache.set('retail_data', data, timeout=86400)
