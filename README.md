@@ -1,4 +1,4 @@
-echo "# Market Basket Analysis Project
+# Market Basket Analysis Project
 
 This project applies Market Basket Analysis techniques to a dataset to uncover patterns in customer purchasing behavior, commonly used for recommendations and product association insights.
 
